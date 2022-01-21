@@ -8,11 +8,12 @@ log=Tk()
 log.geometry("300x100")
 log.title("Авторизация")
 def append():
-    global Reg
-    showinfo(title="OK",message="Пароль принят и добавлен в базу данных!")
-    userr.append(login)
-    passww.append(psw)
-    Reg.destroy()
+    if psw.get=="" or login.get=="":
+        showerror(title="Error",message="Пароль или логин не может быть пустотой!")
+    else:
+        showinfo(title="OK",message="Пароль принят и добавлен в базу данных!")
+        userr.append(login)
+        passww.append(psw)
 def Reg():
     log.destroy()
     reg=Tk()
@@ -56,6 +57,3 @@ Button(text="Вход",command=Login).grid(row=2,column=3)
 
 
 log.mainloop()
-
-
-
