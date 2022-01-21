@@ -12,8 +12,8 @@ def append():
         showerror(title="Error",message="Пароль или логин не может быть пустотой!")
     else:
         showinfo(title="OK",message="Пароль принят и добавлен в базу данных!")
-        userr.append(login)
-        passww.append(psw)
+        userr.append(login.get)
+        passww.append(psw.get)
 def Reg():
     log.destroy()
     reg=Tk()
